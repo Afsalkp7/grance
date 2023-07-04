@@ -94,15 +94,34 @@
     position: absolute;
     top: 150px;
 }
+
 .pop-up{
-    top: -400px;
-    animation: drop 2.8s ease forwards;
+    opacity: 0;
+    transform: translatey(-10px);
+    animation: spread 0.8s ease forwards; 
 }
-@keyframes drop{
-    0%{opacity: 0;}
-    70%{transform: translateY(700px) ;}
-    100%{transform: translateY(650px);opacity: 1;}
+.pop-up-Text{
+    opacity: 0;
+    animation: clear 1s ease 0.8s forwards;
 }
+@keyframes spread {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: none;
+    }
+}
+@keyframes clear {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 .btnHero{
     width: 160px;
     border: 1px solid;
